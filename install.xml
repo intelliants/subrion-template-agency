@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template name="agency">
+	<title>Agency</title>
+	<summary>Bootstrap 3 based template</summary>
+	<author>Nurlan Tuilkubaev</author>
+	<contributor>Intelliants LLC</contributor>
+	<version>1.0.0</version>
+	<date>2016-04-08</date>
+	<compatibility>4.0</compatibility>
+
+	<layout>
+		<position menu="1" movable="0">account</position>
+		<position menu="1" movable="6">mainmenu</position>
+
+		<position>teaser</position>
+		<position>verytop</position>
+		<position>verytop1</position>
+		<position>top-text</position>
+		<position>top</position>
+		<position>bottom</position>
+		<position>footer-block</position>
+		<position>text-block</position>
+		<position>verybottom</position>
+		<position>copyright</position>
+
+		<section name="content">
+			<position fixed="1">left</position>
+			<position width="9">center</position>
+		</section>
+		<section name="verytop1">
+			<position width="4">service1</position>
+			<position width="4">service2</position>
+			<position width="4">service3</position>
+		</section>
+		<section name="footer-blocks">
+			<position width="4">footer1</position>
+			<position width="4">footer2</position>
+			<position width="4">footer3</position>
+		</section>
+		<section name="text-blocks">
+			<position width="4">text1</position>
+			<position width="4">text2</position>
+			<position width="4">text3</position>
+		</section>
+	</layout>
+
+	<configgroup name="template_start_bootstrap">Template</configgroup>
+
+	<config group="template_start_bootstrap" 
+		    type="divider"
+		    order="3000">General</config>
+
+	<config group="template_start_bootstrap" 
+		    name="max_top_menu_items" 
+		    type="text" 
+		    description="Max number of items in Main Menu"
+		    order="3002">6</config>
+
+	<config group="template_start bootstrap"
+		    name="enable_landing" 
+		    type="radio"
+		    order="3003" 
+		    values="1,0" 
+		    description="Enable landing page">0</config>
+
+	<config group="template_start_bootstrap" 
+		    name="website_bg" 
+		    type="image" 
+		    description="Header background"
+		    order="3004"><![CDATA[]]></config>
+
+	<config group="template_start_bootstrap"
+		    name="enable_text_logo" 
+		    type="radio"
+		    order="3005" 
+		    values="1,0" 
+		    description="Enable Logo text">1</config>
+	<config group="template_start_bootstrap"
+			name="logo_text"
+		    type="text" 
+		    order="3006" 
+		    show="enable_text_logo|1" 
+		    description="Logo text">Start Bootstrap</config>
+
+	<config group="template_start_bootstrap" 
+		    type="divider"
+		    order="3030">Social links</config>
+	
+	<config group="template_start_bootstrap"
+			name="website_social"
+		    type="radio" 
+		    order="3031"
+		    values="1,0" 
+		    description="Show links">1</config>
+	<config group="template_start_bootstrap"
+			name="website_social_t"
+		    type="text"
+		    order="3032"
+		    show="website_social|1" 
+		    description="Twitter Link">https://twitter.com/IntelliantsLLC</config>
+	<config group="template_start_bootstrap"
+			name="website_social_f"
+		    type="text" 
+		    order="3033" 
+		    show="website_social|1" 
+		    description="Facebook Link">https://www.facebook.com/Intelliants</config>
+	<config group="template_start_bootstrap"
+			name="website_social_g"
+		    type="text" 
+		    order="3034" 
+		    show="website_social|1" 
+		    description="Google+ Link">https://plus.google.com/102500660503219569194/posts</config>
+	<config group="template_start_bootstrap"
+			name="website_social_i"
+		    type="text" 
+		    order="3035" 
+		    show="website_social|1" 
+		    description="LinkedIn Link">#</config>
+
+	<config group="template_start_bootstrap" 
+		    name="ckeditor_css" 
+		    type="hidden" 
+		    description="CKEditor CSS"
+		    order="3099">ckeditor.css</config>
+
+	<changeset>
+		<menu position="account" status="active">account</menu>
+		<block status="active" position="verytop" classname="portfolio" header="1">new_portfolio_entries</block>
+		<block status="active" classname="box--border">common_statistics</block>
+		<block status="active" classname="box--border">filters</block>
+	</changeset>
+	<blocks>
+		<block name="header" 
+			   title="Teaser block" 
+			   position="teaser" 
+			   header="0"
+			   collapsible="0" 
+			   sticky="0" 
+			   pages="index"
+			   status="active"
+			   type="html">
+			<![CDATA[
+<div class="teaser">
+	<h3>Welcome To Our Studio!</h1>
+	<h1>IT'S NICE TO MEET YOU</h2>
+	<p><a href="#" class="btn">TELL ME MORE</a></p>
+</div>
+			]]>
+		</block>
+		<block name="verytop1" 
+			   title="services" 
+			   position="verytop1" 
+			   header="0"
+			   collapsible="0" 
+			   sticky="0" 
+			   pages="index"
+			   status="active"
+			   type="html">
+			<![CDATA[
+<div class="row">
+	<div class="col-lg-12 text-center">
+		<h2 class="section-heading">Services</h2>
+		<h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+	</div>
+</div>
+			]]>
+		</block>
+		<block name="service1" 
+			   title="E-Commerce" 
+			   position="service1" 
+			   header="0"
+			   collapsible="0" 
+			   sticky="1" 
+			   status="active"
+			   type="html">
+			<![CDATA[
+<div class="serv">
+	<i class="fa fa-shopping-cart fa-stack-1x fa-inverse iconee"></i>
+	<h3>E-Commerce</h3>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+</div>
+			]]>
+		</block>
+		<block name="service2" 
+			   title="Responsive Design" 
+			   position="service2" 
+			   header="0"
+			   collapsible="0" 
+			   sticky="1" 
+			   status="active"
+			   type="html">
+			<![CDATA[
+<i class="fa fa-laptop fa-stack-1x fa-inverse iconee"></i>
+<h3>Responsive Design</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+			]]>
+		</block>
+		<block name="service3" 
+			   title="Web Security" 
+			   position="service3" 
+			   header="0"
+			   collapsible="0" 
+			   sticky="1" 
+			   status="active"
+			   type="html">
+			<![CDATA[
+<i class="fa fa-lock fa-stack-1x fa-inverse iconee"></i>
+<h3>Web Security</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+			]]>
+		</block>
+		<block name="content" 
+			   title="Team" 
+			   position="top" 
+			   header="0"
+			   collapsible="1" 
+			   sticky="0" 
+			   pages="index"
+			   status="active"
+			   type="html">
+			<![CDATA[
+<div class="row">
+	<div class="col-md-12">
+		<h2>OUR AMAZING TEAM</h2>
+		<p>Lorem ipsum dolor sit amet consectetur.</p>
+	</div>
+</div>
+			]]>
+		</block>
+		<block name="bottom_block" 
+			   title="Bottom block position" 
+			   position="bottom" 
+			   header="1"
+			   collapsible="1" 
+			   sticky="0"
+			   pages="index" 
+			   status="active"
+			   type="html">
+			<![CDATA[
+<p>You can change this block in admin panel. Remember, if you change template, this block will be lost. We advise you to clone this block.</p>
+<p>Ne lorem percipit efficiantur mei, ius ut simul vidisse. An vel probatus explicari appellantur. Has et comprehensam interpretaris, quo no inimicus maluisset temporibus. Ea mea quod incorrupte, brute laoreet at pri, eam antiopam honestatis efficiantur ea. Velit atomorum voluptaria ad nam, hinc aperiam accumsan ne est, ut dictas dissentias his.</p>
+			]]>
+		</block>
+		<block name="text-block" 
+			   title="Team" 
+			   position="text-block" 
+			   header="0"
+			   collapsible="0" 
+			   sticky="0" 
+			   pages="index"
+			   status="active"
+			   type="smarty">
+			<![CDATA[
+<div class="row">
+	<div class="col-md-12">
+		<h2>ABOUT</h2>
+		<p>Lorem ipsum dolor sit amet consectetur.</p>
+	</div>
+</div>
+			]]>
+		</block>
+		<block name="text1" 
+			   title="Kay Garland" 
+			   position="text1" 
+			   header="0"
+			   collapsible="0" 
+			   sticky="0" 
+			   status="active"
+			   type="smarty">
+			<![CDATA[
+<h4>Kay Garland</h4>
+<p class="data">2009-2011</p>
+<p class="text1-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+			]]>
+		</block>
+		<block name="text2" 
+			   title="Larry Parker" 
+			   position="text2" 
+			   header="0"
+			   collapsible="0" 
+			   sticky="1" 
+			   status="active"
+			   type="smarty">
+			<![CDATA[
+<h4>Larry Parker</h4>
+<p class="data">2009-2011</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+			]]>
+		</block>
+		<block name="text3" 
+			   title="Diana Pertersen" 
+			   position="text3" 
+			   header="0"
+			   collapsible="0" 
+			   sticky="1" 
+			   status="active"
+			   type="smarty">
+			<![CDATA[
+<h4>Diana Pertersen</h4>
+<p class="data">2009-2011</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+			]]>
+		</block>
+		<block name="footer-block" 
+			   title="Team" 
+			   position="footer-block" 
+			   header="0"
+			   collapsible="0" 
+			   sticky="0" 
+			   pages="index"
+			   status="active"
+			   type="html">
+			<![CDATA[
+<div class="text-center">
+	<h2 class="section-heading">Our amazing team</h2>
+	<h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+</div>
+		]]>
+		</block>
+
+
+		<block name="footer1" 
+			   title="Kay Garland" 
+			   position="footer1" 
+			   header="0"
+			   collapsible="0" 
+			   sticky="1" 
+			   status="active"
+			   type="smarty">
+			<![CDATA[
+<img src="{$img}photo/1.jpg" class="photo" alt=""/>
+<h4>Kay Garland</h4>
+<span>Lead Designer</span>
+<ul class="list-inline social-buttons">
+    <li><a href="#"><i class="fa fa-twitter"></i></a>
+    </li>
+    <li><a href="#"><i class="fa fa-facebook"></i></a>
+    </li>
+    <li><a href="#"><i class="fa fa-linkedin"></i></a>
+    </li>
+</ul>
+			]]>
+		</block>
+		<block name="footer2" 
+			   title="Larry Parker" 
+			   position="footer2" 
+			   header="0"
+			   collapsible="0" 
+			   sticky="1" 
+			   status="active"
+			   type="smarty">
+			<![CDATA[
+<img src="{$img}photo/2.jpg" class="photo" alt=""/>
+<h4>Larry Parker</h4>
+<span>Lead Marketer</span>
+<ul class="list-inline social-buttons">
+    <li><a href="#"><i class="fa fa-twitter"></i></a>
+    </li>
+    <li><a href="#"><i class="fa fa-facebook"></i></a>
+    </li>
+    <li><a href="#"><i class="fa fa-linkedin"></i></a>
+    </li>
+</ul>
+			]]>
+		</block>
+		<block name="footer3" 
+			   title="Diana Pertersen" 
+			   position="footer3" 
+			   header="0"
+			   collapsible="0" 
+			   sticky="1" 
+			   status="active"
+			   type="smarty">
+			<![CDATA[
+<img src="{$img}photo/3.jpg" class="photo" alt=""/>
+<h4>Diana Pertersen</h4>
+<span>Lead Developer</span>
+<ul class="list-inline social-buttons">
+    <li><a href="#"><i class="fa fa-twitter"></i></a>
+    </li>
+    <li><a href="#"><i class="fa fa-facebook"></i></a>
+    </li>
+    <li><a href="#"><i class="fa fa-linkedin"></i></a>
+    </li>
+</ul>
+			]]>
+		</block>
+	</blocks>
+	<phrases>
+		<phrase category="frontend" key="login">Log in</phrase>
+		<phrase category="frontend" key="register">Sign up</phrase>
+		<phrase category="frontend" key="back_to_top">Back to top</phrase>
+		<phrase category="frontend" key="share_your_love">Share your love</phrase>
+	</phrases>
+</template>

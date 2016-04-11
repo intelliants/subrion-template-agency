@@ -1,0 +1,309 @@
+
+//
+// Global styles
+// --------------------------------------------------
+
+.font-normalize(@size, @margin: 0) {
+  font-size: @size;
+  line-height: @size;
+  margin: @margin;
+}
+body {
+  background: #f4f4f4;
+}
+
+// improvements for cols in mobile version
+@media (max-width: @grid-float-breakpoint) {
+  .row {
+    [class*="col-md"] + [class*="col-md"] {
+      margin-top: 30px;
+    }
+  }
+}
+.verybottom{
+  background-color: #333;
+  background-image: url('../img/map-image.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0;
+}
+// Content
+// --------------------------------------------------
+.breadcrumbs {
+  background: #f2f2f2;
+  .breadcrumb {
+    float: left;
+  }
+  .action-buttons {
+    float: right;
+    margin-top: 7px;
+  }
+}
+.page-header {
+  margin-top: 0;
+}
+.verytop{
+  background-color: #f3f3f3;
+  padding: 150px 0;
+     .h4{
+     font-size: 40px;
+  }
+}
+ .box + div {
+     margin-top: 60px; 
+} 
+.box__content{
+    font-size: 16px;
+    text-transform: none;
+    font-style: italic;
+    font-weight: 400;
+    color: #000;
+    padding-top: 25px;
+}
+.verytop1{
+  padding: 100px 0;
+  background: #fff;
+  text-align: center;
+    p{
+      color: #c1c1c1;
+      text-align: center;
+      padding-top: 0px;
+      font-size: 16px;
+    }
+    h3{
+      text-align: center;
+      padding-top: 0px;
+      font-family: @headings-font-family;
+      font-size: 18px;
+      font-weight: bold;
+    }
+}
+.fa-stack-1x{
+  position: relative;
+}
+.content {
+  padding: @vertical-rhythm*2 0;
+  background: #fff;
+
+  &__header {
+    .clearfix();
+    border-bottom: 1px solid #ddd;
+    margin-bottom: @vertical-rhythm/2;
+    padding-bottom: @vertical-rhythm/2;
+    h1 {
+      float: left;
+      .font-normalize(28px, 0);
+    }
+  }
+  &__actions {
+    float: right;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    > li {
+      float: left;
+      > a {
+        display: inline-block;
+        line-height: 28px;
+        margin-left: @vertical-rhythm/2;
+        color: fade(@text-color, 50%);
+
+        &:hover {
+          color: fade(@text-color, 70%);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &__body {
+    + .box {
+      margin-top: @vertical-rhythm*2;
+    }
+  }
+}
+.verybottom {
+  padding: @vertical-rhythm*2 0;
+  border-top: 1px solid #ddd;
+}
+.highlight {
+  background: #fde35b;
+}
+
+//
+// Navs
+// --------------------------------------------------
+
+.nav-inline {
+  > li {
+    float: left;
+    > a {
+      padding: 0;
+      margin: 0 15px 0 0;
+      &:hover {
+        background: none;
+      }
+    }
+  }
+}
+/* New portfolio entries block */
+.portfolio-entries .ia-item__image:after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 4;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity .14s ease-in-out;
+         -o-transition: opacity .14s ease-in-out;
+            transition: opacity .14s ease-in-out;
+}
+.portfolio-entries .ia-item__image:hover:after {
+  opacity: 1;
+}
+.portfolio-entries .ia-item__image:hover .fa {
+  opacity: 1;
+}
+/* Tags block */
+.ia-item__tags {
+  margin-top: 10px;
+}
+@media (min-width: 480px) {
+  .portfolio-entries .row + .row .ia-item--card .ia-item__image {
+    margin-top: 40px;
+  }
+}
+/* Portfolio entries list page */
+.page-portfolio .portfolio-entries .ia-item__title {
+  margin-bottom: 5px;
+}
+// Global Section Styles
+.verytop1,
+.footer-block {
+    h2.section-heading {
+    font-size: 40px;
+    margin-top: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: @headings-font-family;
+}
+    h3.section-subheading {
+    font-size: 16px;
+    font-family: @font-family-serif;
+    text-transform: none;
+    font-style: italic;
+    font-weight: 400;
+    }
+}
+@media(min-width:768px) {
+  .verytop1,
+  .footer-block {
+    padding: 150px 0;
+  }
+}
+
+// Services Section
+
+.service-heading {
+  margin: 15px 0;
+  text-transform: none;
+}
+//
+// Portfolio
+// --------------------------------------------------
+.portfolio {
+  h4
+  {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: @headings-font-family;
+    text-align: center;
+  }
+   .portfolio-caption h4 {
+    font-size: 20px;
+    color: #000;
+    font-family: @headings-font-family;
+   }
+}
+#portfolio {
+  padding-top: 60px;
+    .portfolio-item {
+        margin: 0 0 15px;
+        right: 0;
+        .portfolio-link {
+            display: block;
+            position: relative;
+            max-width: 400px;
+            margin: 0 auto;
+            .portfolio-hover {
+                background: fade(@brand-primary, 90%);
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: all ease 0.5s;
+                -webkit-transition: all ease 0.5s;
+                -moz-transition: all ease 0.5s;
+                &:hover {
+                    opacity: 1;
+                }
+                .portfolio-hover-content {
+                    position: absolute;
+                    width: 100%;
+                    height: 20px;
+                    font-size: 20px;
+                    text-align: center;
+                    top: 50%;
+                    margin-top: -12px;
+                    color: white;
+                    i {
+                        margin-top: -12px;
+                    }
+                    h3,
+                    h4 {
+                        margin: 0;
+                    }
+                }                
+            }            
+        }
+        .portfolio-caption {
+          max-width: 400px;
+          margin: 0 auto;
+          background-color: white;
+          text-align: center;
+          padding: 25px;
+          h4 {
+            text-transform: none;
+            margin: 0;
+          }
+          p {
+            font-family: @font-family-serif;
+            font-style: italic;
+            font-size: 16px;
+            margin: 0;
+          }
+        }
+    }
+    * {
+        z-index: 2;
+    }
+}
+@media(min-width:767px) {
+    #portfolio {
+        .portfolio-item {
+            margin: 0 0 30px;
+        }
+    }
+}
+.ia-item__content h4{
+  
+  text-align: left;
+  
+}

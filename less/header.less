@@ -1,0 +1,56 @@
+
+//
+// Header
+// --------------------------------------------------
+
+.header {
+	background: #2d2d30 url(../img/bg.jpg) 50% 50% no-repeat;
+	background-size: cover;
+	}
+.teaser {
+	text-align: center;
+	padding: 200px 0;
+	h3{
+		color: #fff;
+		font-size: 40px;
+		font-family: 'Droid Serif', serif;
+	}
+	h1{
+		color:#fff;
+		font-size: 75px;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	p{
+		color: #fff;
+	}
+	.btn{
+		font-weight: 700;
+		border-radius: 3px;
+		font-size: 18px;
+		border-color: #fed136;
+		padding: 20px 40px;
+		margin-top: 30px;
+		background-color: #fed136;
+		color: #fff;
+		text-transform: uppercase;
+		&:hover{
+			background-color: #fbb034;
+			transition: all .5s ease;
+		}
+	}
+	@media (min-width: @grid-float-breakpoint) {
+		h4 {
+			.font-normalize(48px);
+		}
+
+		p {
+			.font-normalize(24px, 10px 0 0);
+		}
+	}
+}
+
+
+
+
+
