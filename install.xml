@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<template name="agency">
+<module type="template" name="agency">
 	<title>Agency</title>
 	<summary>Bootstrap 3 based template</summary>
 	<author>Nurlan Tuilkubaev</author>
 	<contributor>Intelliants LLC</contributor>
-	<version>1.0.0</version>
-	<date>2016-04-08</date>
-	<compatibility>4.0</compatibility>
+	<version>1.1.0</version>
+	<date>2017-02-23</date>
+	<compatibility>4.1.0</compatibility>
 
 	<layout>
 		<position menu="1" movable="0">account</position>
@@ -44,80 +44,73 @@
 		</section>
 	</layout>
 
-	<configgroup name="template_start_bootstrap">Template</configgroup>
+	<configgroup name="template_agency">Template</configgroup>
 
-	<config group="template_start_bootstrap" 
+	<config group="template_agency"
 		    type="divider"
 		    order="3000">General</config>
 
-	<config group="template_start_bootstrap" 
-		    name="max_top_menu_items" 
-		    type="text" 
+	<config group="template_agency"
+		    name="max_top_menu_items"
+		    type="text"
 		    description="Max number of items in Main Menu"
-		    order="3002">6</config>
+		    order="3001">6</config>
 
-	<config group="template_start bootstrap"
-		    name="enable_landing" 
-		    type="radio"
-		    order="3003" 
-		    values="1,0" 
-		    description="Enable landing page">0</config>
-
-	<config group="template_start_bootstrap" 
-		    name="website_bg" 
-		    type="image" 
+	<config group="template_agency"
+		    name="website_bg"
+		    type="image"
 		    description="Header background"
-		    order="3004"><![CDATA[]]></config>
+		    order="3002"><![CDATA[]]></config>
 
-	<config group="template_start_bootstrap"
-		    name="enable_text_logo" 
+	<config group="template_agency"
+		    name="enable_text_logo"
 		    type="radio"
-		    order="3005" 
-		    values="1,0" 
+		    order="3003"
+		    values="1,0"
 		    description="Enable Logo text">1</config>
-	<config group="template_start_bootstrap"
+	<config group="template_agency"
 			name="logo_text"
-		    type="text" 
-		    order="3006" 
-		    show="enable_text_logo|1" 
+		    type="text"
+		    order="3004"
+		    show="enable_text_logo|1"
 		    description="Logo text">Start Bootstrap</config>
 
-	<config group="template_start_bootstrap" 
+	<config group="template_agency"
 		    type="divider"
 		    order="3030">Social links</config>
-	
-	<config group="template_start_bootstrap"
+
+	<config group="template_agency"
 			name="website_social"
-		    type="radio" 
+		    type="radio"
 		    order="3031"
-		    values="1,0" 
+		    values="1,0"
 		    description="Show links">1</config>
-	<config group="template_start_bootstrap"
+	<config group="template_agency"
 			name="website_social_t"
 		    type="text"
 		    order="3032"
-		    show="website_social|1" 
+		    show="website_social|1"
 		    description="Twitter Link">https://twitter.com/IntelliantsLLC</config>
-	<config group="template_start_bootstrap"
+	<config group="template_agency"
 			name="website_social_f"
-		    type="text" 
-		    order="3033" 
-		    show="website_social|1" 
+		    type="text"
+		    order="3033"
+		    show="website_social|1"
 		    description="Facebook Link">https://www.facebook.com/Intelliants</config>
-	<config group="template_start_bootstrap"
+	<config group="template_agency"
 			name="website_social_g"
-		    type="text" 
-		    order="3034" 
-		    show="website_social|1" 
+		    type="text"
+		    order="3034"
+		    show="website_social|1"
 		    description="Google+ Link">https://plus.google.com/102500660503219569194/posts</config>
-	<config group="template_start_bootstrap"
+	<config group="template_agency"
 			name="website_social_i"
-		    type="text" 
-		    order="3035" 
-		    show="website_social|1" 
+		    type="text"
+		    order="3035"
+		    show="website_social|1"
 		    description="LinkedIn Link">#</config>
 
-	<config group="template_start_bootstrap" 
+	<config group="template_agency"
 		    name="ckeditor_css" 
 		    type="hidden" 
 		    description="CKEditor CSS"
@@ -392,4 +385,4 @@
 		<phrase category="frontend" key="back_to_top">Back to top</phrase>
 		<phrase category="frontend" key="share_your_love">Share your love</phrase>
 	</phrases>
-</template>
+</module>

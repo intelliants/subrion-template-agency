@@ -1,8 +1,8 @@
-{ia_add_media files='css: _IA_URL_plugins/portfolio/templates/front/css/style'}
+{ia_add_media files='css: _IA_URL_modules/portfolio/templates/front/css/style'}
 {if isset($portfolio_entry)}
 	<div class="portfolio-entry">
 		{if $portfolio_entry.image}
-			{printImage imgfile=$portfolio_entry.image title=$portfolio_entry.title fullimage=true class='m-b img-responsive'}
+			{ia_image file=$portfolio_entry.image title=$portfolio_entry.title type='large' class='img-responsive m-b'}
 		{/if}
 		{$portfolio_entry.body}
 		<div class="tags">
@@ -36,7 +36,7 @@
 				<div class="col-md-4">
 					<div class="ia-item ia-item--card">
 						{if $pf_entry.image}
-							<a href="{$smarty.const.IA_URL}portfolio/{$pf_entry.id}-{$pf_entry.alias}" class="ia-item__image">{printImage imgfile=$pf_entry.image title=$pf_entry.title fullimage=true}<span class="fa fa-eye"></span></a>
+							<a href="{$smarty.const.IA_URL}portfolio/{$pf_entry.id}-{$pf_entry.alias}" class="ia-item__image">{ia_image file=$pf_entry.image title=$pf_entry.title type='large'}<span class="fa fa-eye"></span></a>
 						{/if}
 						<div class="ia-item__content">
 							<h4 class="ia-item__title">

@@ -1,4 +1,4 @@
-{if isset($block_portfolio_entries) && $block_portfolio_entries}
+{if !empty($block_portfolio_entries)}
 	<div class="ia-items portfolio-entries m-b" id="portfolio">
 		<div class="row">
 			{foreach $block_portfolio_entries as $pf_entry}
@@ -10,7 +10,7 @@
 							</div>
 						</div>
 						{if $pf_entry.image}
-							{printImage imgfile=$pf_entry.image title=$pf_entry.title fullimage=true class='img-responsive'}
+							{ia_image file=$pf_entry.image title=$pf_entry.title type='large' class='img-responsive'}
 						{/if}
 					</a>
 					<div class="portfolio-caption">
@@ -34,4 +34,4 @@
 	<div class="alert alert-info">{lang key='pf_no_entries'}</div>
 {/if}
 
-{ia_add_media files='css: _IA_URL_plugins/portfolio/templates/front/css/style'}
+{ia_add_media files='css: _IA_URL_modules/portfolio/templates/front/css/style'}
